@@ -11,7 +11,7 @@ public class MysqlConnector {
 	static String dataBaseName = "rs";
 	private static String url = "jdbc:mysql://" + server + "/" + dataBaseName;
 	private static String userName = "root";
-	private static String passWord = "";
+	private static String passWord = "3Dd51io9";
 
 	public static Connection getConnection() {
 
