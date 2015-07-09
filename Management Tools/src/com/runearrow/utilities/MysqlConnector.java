@@ -1,6 +1,11 @@
 package com.runearrow.utilities;
 
 import com.mysql.jdbc.Connection;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
@@ -11,11 +16,25 @@ public class MysqlConnector {
 	static String dataBaseName = "rs";
 	private static String url = "jdbc:mysql://" + server + "/" + dataBaseName;
 	private static String userName = "root";
-	private static String passWord = "3Dd51io9";
+	private static String passWord = getMysqlPassword();
 
 	public static Connection getConnection() {
 
 		return ((Connection) connectionThread.get());
+	}
+
+	private static String getMysqlPassword() {
+		try (BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.home") + "/rootpass.dat"))) {
+		    String line;
+		    while ((line = br.readLine()) != null) {
+		    	return line;
+		    }
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return "";
 	}
 
 	public static void release() throws SQLException {
