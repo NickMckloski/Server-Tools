@@ -1,14 +1,13 @@
 package com.runearrow;
 
 
+import com.runearrow.npcdefdumper.NPCDefDumperPanel;
 import com.runearrow.shopeditor.ShopEditorPanel;
 
 import java.awt.Component;
 
 import javax.swing.JFrame;
 import javax.swing.JTabbedPane;
-
-import npcdefdumper.NPCDefDumperPanel;
 
 /**
  * MainFrame class, the wrapping jframe for the whole application
