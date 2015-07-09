@@ -76,7 +76,7 @@ public class MainFrame extends JFrame {
 
 		tabbedPane = new JTabbedPane();
 		tabbedPane.addTab("Shop Editor", (Component) shopEditorJPanel);
-		tabbedPane.addTab("Shop Editor", (Component) npcDumperJPanel);
+		tabbedPane.addTab("NPC Definition Dumper", (Component) npcDumperJPanel);
 		mainJFrame.add(tabbedPane);
 		
 	}
