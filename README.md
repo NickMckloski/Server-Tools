@@ -1,5 +1,5 @@
 # Server-Tools
-Tools to help manage my server. Currently includes a shop editor, but more tools could be added.
+Tools to help manage my server. Currently includes a shop editor and npc definitions dumper, but more tools could be added.
 
 #How to Run
 Run from MainFrame.java.
