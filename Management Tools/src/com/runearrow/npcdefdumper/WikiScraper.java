@@ -1,4 +1,4 @@
-package npcdefdumper;
+package com.runearrow.npcdefdumper;
 
 import java.io.BufferedReader;
 import java.io.IOException;

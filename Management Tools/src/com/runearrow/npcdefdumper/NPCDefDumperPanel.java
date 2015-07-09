@@ -1,4 +1,4 @@
-package npcdefdumper;
+package com.runearrow.npcdefdumper;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;
