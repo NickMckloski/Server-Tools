@@ -8,6 +8,8 @@ import java.awt.Component;
 import javax.swing.JFrame;
 import javax.swing.JTabbedPane;
 
+import npcdefdumper.NPCDefDumperPanel;
+
 /**
  * MainFrame class, the wrapping jframe for the whole application
  * 
@@ -19,6 +21,7 @@ public class MainFrame extends JFrame {
 	private static JFrame mainJFrame;
 	private static JTabbedPane tabbedPane;
 	private static ShopEditorPanel shopEditorJPanel;
+	private static NPCDefDumperPanel npcDumperJPanel;
 
 	/**
 	 * Constructor for MainFrame class
@@ -35,10 +38,10 @@ public class MainFrame extends JFrame {
 	 */
 	public static void main(String[] parameters) {
 
-		MainFrame.constructMainJFrame(700, 450);
-		MainFrame.constructJPanelTabs();
-		MainFrame.constructTabbedPane();
-		MainFrame.finalizeMainFrame();
+		constructMainJFrame(700, 450);
+		constructJPanelTabs();
+		constructTabbedPane();
+		finalizeMainFrame();
 		
 	}
 
@@ -74,6 +77,7 @@ public class MainFrame extends JFrame {
 
 		tabbedPane = new JTabbedPane();
 		tabbedPane.addTab("Shop Editor", (Component) shopEditorJPanel);
+		tabbedPane.addTab("Shop Editor", (Component) npcDumperJPanel);
 		mainJFrame.add(tabbedPane);
 		
 	}
@@ -83,7 +87,8 @@ public class MainFrame extends JFrame {
 	 */
 	public static void constructJPanelTabs() {
 
-		MainFrame.constructShopEditorPanel();
+		constructShopEditorPanel();
+		constructNPCDumperPanel();
 		
 	}
 
@@ -93,6 +98,14 @@ public class MainFrame extends JFrame {
 	private static void constructShopEditorPanel() {
 
 		shopEditorJPanel = new ShopEditorPanel();
+		
+	}
+	/**
+	 * Builds NPCDefDumperPanel
+	 */
+	private static void constructNPCDumperPanel() {
+
+		npcDumperJPanel = new NPCDefDumperPanel();
 		
 	}
 

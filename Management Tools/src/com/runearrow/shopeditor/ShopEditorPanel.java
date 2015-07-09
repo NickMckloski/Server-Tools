@@ -1,6 +1,6 @@
 package com.runearrow.shopeditor;
 
-import com.runearrow.mysql.MysqlConnector;
+import com.runearrow.utilities.MysqlConnector;
 
 import java.awt.Color;
 import java.awt.Dimension;

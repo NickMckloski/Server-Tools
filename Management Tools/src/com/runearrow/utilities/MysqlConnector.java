@@ -1,4 +1,4 @@
-package com.runearrow.mysql;
+package com.runearrow.utilities;
 
 import com.mysql.jdbc.Connection;
 import java.sql.DriverManager;
